@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+/* Default styles for larger screens */
+.nav {
+    display: flex;
+    width: 70%;
+    padding: 0.5%;
+    border-bottom: 1px solid rgba(204, 202, 212, 0.154);
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    font-family: 'Kumbh Sans', sans-serif;
+    flex-wrap: wrap; /* Allow items to wrap to the next line if space is insufficient */
+}
+
+li {
+    list-style-type: none;
+    margin-right: 3em;
+    color: hsl(219, 9%, 45%);
+}
+
+.lastChild {
+    margin-right: 0;
+}
+
+.navEnd {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li:hover {
+    cursor: pointer;
+    color: black;
+}
+
+.pic {
+    width: 25%;
+    margin-left: 3em;
+}
+
+.pic:hover {
+    border: 1px solid;
+    border-color: hsl(26, 100%, 55%);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.cart-img:hover {
+    cursor: pointer;
+}
+
+.empty-cart {
+    box-shadow: 5px 5px 10px 2px #333;
+    width: 20%;
+    border-radius: 5%;
+    position: absolute;
+    top: 70px;
+    right: 300px;
+    background-color: white;
+}
+
+.empty-cart-h {
+    padding: 5%;
+}
+
+.empty-cart-p {
+    padding: 10%;
+    color: hsl(219, 9%, 45%);
+}
+
+.forMain {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 20px;
+    font-family: 'Kumbh Sans', sans-serif;
+    position: relative;
+}
+
+.heading {
+    color: hsl(26, 100%, 55%);
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.heading2 {
+    font-size: 3rem;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.firstImg {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+}
+
+.smallImg {
+    border-radius: 10%;
+    width: 20%;
+}
+
+.smallImg:hover {
+    border: 5px solid hsl(26, 100%, 55%);
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.forButton {
+    width: 70%;
+}
+
+button {
+    border-radius: 10px;
+    background-color: hsl(26, 100%, 55%);
+    color: white;
+    padding: 5px;
+    border: none;
+    display: flex;
+    align-items: center;
+    width: 70%;
+    justify-content: center;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: hsla(26, 100%, 55%, 0.5);
+}
+
+.forMain {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+}
+
+.first {
+    width: 100%;
+}
+
+.sectionA {
+    width: 40%;
+}
+
+.sectionB {
+    width: 40%;
+    padding: 50px;
+}
+
+.thumbnail {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.paragraph {
+    color: hsl(219, 9%, 45%);
+}
+
+#deco {
+    text-decoration: line-through;
+    color: hsl(219, 9%, 45%);
+}
+
+.amount {
+    display: flex;
+    justify-content: space-between;
+    width: 35%;
+    align-items: center;
+}
+
+.amount1 {
+    font-size: xx-large;
+}
+
+.amount2 {
+    color: hsl(26, 100%, 55%);
+    background-color: hsl(25, 100%, 94%);
+    width: 20%;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.number {
+    display: flex;
+    background-color: rgba(204, 202, 212, 0.154);
+    color: hsl(26, 100%, 55%);
+    width: 30%;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 10px;
+    justify-content: space-around;
+}
+
+.number:hover {
+    cursor: pointer;
+}
+
+.black {
+    color: black;
+}
+
+.last {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
+    .nav {
+        width: 90%;
+        padding: 2%;
+    }
+    
+    ul {
+        flex-direction: column; /* Stack the navigation vertically */
+    }
+    
+    li {
+        margin-right: 0; /* Remove right margin to stack list items */
+        margin-bottom: 1em; /* Add bottom margin for spacing */
+    }
+    
+    .pic {
+        width: 20%;
+        margin-left: 1em;
+    }
+    
+    .forMain {
+        width: 100%;
+    }
+    
+    .sectionA,
+    .sectionB {
+        width: 100%;
+        padding: 20px; /* Increase padding for smaller screens */
+    }
+    
+    .amount {
+        width: 100%;
+    }
+    
+    .number {
+        width: 100%;
+        margin-top: 1em; /* Add top margin for spacing */
+    }
+    
+    .last {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Additional media query for screens up to 1040px */
+@media screen and (max-width: 1040px) {
+    .sectionA {
+        width: 100%;
+    }
+    .sectionB {
+        width: 100%;
+        padding: 20px;
+    }
+    .firstImg {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 5%;
+    }
+}
