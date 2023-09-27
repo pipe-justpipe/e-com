@@ -51,6 +51,8 @@ function createNewCart(){
     /////////////////////////////////////////////////
     gridDiv.appendChild(firstParagraph);
     firstParagraph.insertAdjacentElement("afterend",secondParagraph);
+    firstParagraph.textContent = "Fall Limited Edition Sneakers"
+    secondParagraph.textContent = "$125.00 x 3"
     /////////////////////////////////////////////////
     flexDiv.insertAdjacentElement("afterend",btnElement);
     console.log(newElement);
