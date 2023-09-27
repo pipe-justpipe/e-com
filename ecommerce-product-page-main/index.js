@@ -10,32 +10,66 @@ increase.addEventListener('click',function increment(){
 console.log(count);
 
 reduce.addEventListener('click',function reduce(){
-    console.log(count);
-    count--;
+    count == 0? 0 : count --;
     black.textContent = count
 } ); 
-
-// function increment(){
-//     // count = count +1
-
-//     count+= 25
-//     countEl.textContent = count
-// }
+console.log(count);
 
 
-// function save (){
-// // 1. Grab the save-el paragrah and store it in a variable called saveEl
-// // 2. Create a variable that contains both the count and the dash separator, i.e. "12 - "
-// // 3. Render the variable in the saveEl using innerText/////
+const cartImage = document.querySelector('.cart-image');
+const bigButton = document.querySelector('.bigbutton');
+const superScript = document.querySelector('.sup');
+const emptyCart = document.querySelector('.empty-cart-p');
+
+function createNewCart(){
+    const newElement = document.createElement('div');
+    const flexDiv = document.createElement('div');
+    const gridDiv = document.createElement('div');
+    const imgElement = document.createElement('img');
+    const firstParagraph = document.createElement('p');
+    const secondParagraph = document.createElement('p');
+    const btnElement = document.createElement('button');
+    const deleteButton = document.createElement('img');
+    ///////////////////////////////////////////////////
+/*SETTING THE ATTRIBUTES OF TE ELEMENTS*/
+    newElement.setAttribute('class', "new-element");
+    flexDiv.setAttribute('class', "flex-div");
+    gridDiv.setAttribute('class', "grid-div");
+    imgElement.setAttribute('src', 'images/image-product-1-thumbnail.jpg')
+    imgElement.setAttribute('class', 'img-element');
+    imgElement.setAttribute('alt', 'imageTHUMBnail');
+    deleteButton.setAttribute('src', 'images/icon-delete.svg')
+    deleteButton.setAttribute('alt', 'deleteButton');
+
+/*Adding elements*/
+    newElement.appendChild(flexDiv);
     
-// let countStr = count + " - "
-// // NB: Make sure to not delete the existing content of the paragraph
-// saveEl.textContent += countStr
+    /////////////////////////////////////////////////
+    flexDiv.appendChild(imgElement);
+    imgElement.insertAdjacentElement("afterend",gridDiv);
+    gridDiv.insertAdjacentElement("afterend",deleteButton);
+    /////////////////////////////////////////////////
+    gridDiv.appendChild(firstParagraph);
+    firstParagraph.insertAdjacentElement("afterend",secondParagraph);
+    /////////////////////////////////////////////////
+    flexDiv.insertAdjacentElement("afterend",btnElement);
+    console.log(newElement);
+    
+    return newElement
+    
+}
 
-// countEl.textContent = 0
-// count=0
+console.log(typeof createNewCart(), createNewCart());
 
-// console.log(count)
-// }
+bigButton.addEventListener( 'click', function addToCart(){
+    superScript.innerHTML = count;
+    if(count == 0){
 
+        emptyCart.innerHTML = "Your cart is empty" ;
 
+    }
+
+    else if(count >= 1){
+        emptyCart.appendChild(createNewCart())? false : emptyCart.appendChild(createNewCart());
+    }
+})

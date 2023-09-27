@@ -44,16 +44,40 @@ li:hover {
     margin-left: 3em;
 }
 
+.img-element {
+    width: 20%;
+    border-radius: 10%;
+}
+
 .pic:hover {
     border: 1px solid;
     border-color: hsl(26, 100%, 55%);
     border-radius: 50%;
     cursor: pointer;
 }
-
+/* .new-element{
+    display: flex;
+} */
+.flex-div{
+    display: flex;
+}
+.grid-div{
+    display: grid;
+}
+.sup{
+    background-color: hsl(26, 100%, 55%);
+    color: white;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: large;
+    padding: 5px;
+}
 .cart-img:hover {
     cursor: pointer;
 }
+/* .cart{
+    display: grid;
+} */
 
 .empty-cart {
     box-shadow: 5px 5px 10px 2px #333;
@@ -115,8 +139,12 @@ li:hover {
 .forButton {
     width: 70%;
 }
-
-button {
+.negative, .black, .positive{
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.bigbutton {
     border-radius: 10px;
     background-color: hsl(26, 100%, 55%);
     color: white;
@@ -128,7 +156,7 @@ button {
     justify-content: center;
 }
 
-button:hover {
+.bigbutton:hover {
     cursor: pointer;
     background-color: hsla(26, 100%, 55%, 0.5);
 }
@@ -193,7 +221,7 @@ button:hover {
 .number {
     display: flex;
     background-color: rgba(204, 202, 212, 0.154);
-    color: hsl(26, 100%, 55%);
+    /* color: hsl(26, 100%, 55%); */
     width: 30%;
     font-size: 20px;
     font-weight: bold;
