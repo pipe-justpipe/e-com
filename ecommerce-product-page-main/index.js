@@ -15,11 +15,22 @@ reduce.addEventListener('click',function reduce(){
 } ); 
 console.log(count);
 
-
+const hiddenDiv =document.querySelector('.hiddendiv');
+const emptyCartContainer = document.querySelector('.empty-cart');
 const cartImage = document.querySelector('.cart-image');
 const bigButton = document.querySelector('.bigbutton');
 const superScript = document.querySelector('.sup');
 const emptyCart = document.querySelector('.empty-cart-p');
+let number = 125
+let item = count
+
+// emptyCartContainer.addEventListener('mouseleave', function (event){
+//     if (event.target == emptyCartContainer) {
+//         console.log('mouseaway')
+//     }
+
+//     return event
+// })
 
 function createNewCart(){
     const newElement = document.createElement('div');
@@ -30,6 +41,9 @@ function createNewCart(){
     const secondParagraph = document.createElement('p');
     const btnElement = document.createElement('button');
     const deleteButton = document.createElement('img');
+    const calculationSpan = document.createElement('span');
+    let calculation = number * count;
+    // calculation.style.fontWeight = 'bold';
     ///////////////////////////////////////////////////
 /*SETTING THE ATTRIBUTES OF TE ELEMENTS*/
     newElement.setAttribute('class', "new-element");
@@ -40,6 +54,18 @@ function createNewCart(){
     imgElement.setAttribute('alt', 'imageTHUMBnail');
     deleteButton.setAttribute('src', 'images/icon-delete.svg')
     deleteButton.setAttribute('alt', 'deleteButton');
+    deleteButton.style.width = '10%';
+    deleteButton.style.height = '5%';
+    // calculation.style.backgroundColor = 'black'
+
+    deleteButton.addEventListener('click', function (){
+        emptyCart.classList.add('hidden');
+        hiddenDiv.classList.remove('hidden');
+        hiddenDiv.textContent = 'Your cart is empty'
+        count = 0;
+        superScript.classList.add('hidden');
+    });
+  
 
 /*Adding elements*/
     newElement.appendChild(flexDiv);
@@ -52,7 +78,13 @@ function createNewCart(){
     gridDiv.appendChild(firstParagraph);
     firstParagraph.insertAdjacentElement("afterend",secondParagraph);
     firstParagraph.textContent = "Fall Limited Edition Sneakers"
-    secondParagraph.textContent = "$125.00 x 3"
+    secondParagraph.textContent ="$125 x " + count +" " + "$" 
+    
+    //style for calculated value
+    calculationSpan.textContent = calculation;
+    calculationSpan.style.fontWeight = 'bold';
+    secondParagraph.appendChild(calculationSpan);
+    
     /////////////////////////////////////////////////
     flexDiv.insertAdjacentElement("afterend",btnElement);
     console.log(newElement);
@@ -66,7 +98,7 @@ console.log(typeof createNewCart(), createNewCart());
 bigButton.addEventListener( 'click', function addToCart(){
     superScript.innerHTML = count;
     if(count == 0){
-
+        emptyCartContainer.classList.remove('hidden');
         emptyCart.innerHTML = "Your cart is empty" ;
 
     }
@@ -74,4 +106,18 @@ bigButton.addEventListener( 'click', function addToCart(){
     else if(count >= 1){
         emptyCart.appendChild(createNewCart())? false : emptyCart.appendChild(createNewCart());
     }
+    hiddenDiv.classList.add("hidden");
+    emptyCart.classList.remove("hidden");
+    superScript.classList.remove("hidden");
+    emptyCartContainer.classList.remove("hidden");
+
 })
+
+// Add event listener to hide the cart on mouse leave
+emptyCartContainer.addEventListener('mouseleave', function () {
+    emptyCartContainer.classList.add('hidden');
+  });
+
+  superScript.addEventListener('click', function () {
+    emptyCartContainer.classList.remove('hidden');
+  });
