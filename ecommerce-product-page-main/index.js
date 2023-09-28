@@ -2,6 +2,7 @@ const reduce = document.querySelector('.negative');
 const increase = document.querySelector('.positive');
 const black = document.querySelector('.black'); 
 let count = 0
+let newCount = 0
 
 increase.addEventListener('click',function increment(){
     count++;
@@ -64,6 +65,8 @@ function createNewCart(){
         hiddenDiv.textContent = 'Your cart is empty'
         // count = 0;
         superScript.style.display = 'none';
+        black.textContent = newCount
+        
     });
   
 
