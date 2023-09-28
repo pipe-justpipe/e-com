@@ -155,7 +155,8 @@ bigButton.addEventListener('click', function() {
 });
 
 const negative = document.querySelector('.negative')
-const 
+const positive = document.querySelector('.positive')
+
 
 
 // Add event listener to hide the cart on mouse leave
