@@ -62,9 +62,7 @@ li:hover {
     display: flex;
     gap: 30px;
 }
-.grid-div{
-    /* display: grid; */
-}
+
 .sup{
     background-color: hsl(26, 100%, 55%);
     color: white;

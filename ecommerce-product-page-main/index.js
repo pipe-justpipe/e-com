@@ -107,28 +107,56 @@ function createNewCart(){
 
 console.log(typeof createNewCart(), createNewCart());
 
-bigButton.addEventListener( 'click', function addToCart(){
+// bigButton.addEventListener( 'click', function addToCart(){
+//     superScript.innerHTML = count;
+//     if(count == 0){
+//         // emptyCartContainer.classList.remove('hidden');
+//         emptyCartContainer.style.display = "block"; 
+//         emptyCart.innerHTML = "Your cart is empty" ;
+
+//     }
+
+//     else if(count >= 1){
+//         emptyCart.appendChild(createNewCart())? false : emptyCart.appendChild(createNewCart());
+//     }
+//     hiddenDiv.style.display = 'none';
+//     emptyCart.style.display = 'block';
+//     superScript.style.display ="block";
+//     emptyCartContainer.style.display ="block";
+
+//     if(black.textContent == 0){
+//         superScript.textContent = 0
+//     } 
+// })
+
+let addToCartExecuted = false; // Initialize a flag to track if the action has been executed
+
+bigButton.addEventListener('click', function() {
+  if (!addToCartExecuted) {
     superScript.innerHTML = count;
-    if(count == 0){
-        // emptyCartContainer.classList.remove('hidden');
-        emptyCartContainer.style.display = "block"; 
-        emptyCart.innerHTML = "Your cart is empty" ;
-
+    
+    if (count === 0) {
+      emptyCartContainer.style.display = "block";
+      emptyCart.innerHTML = "Your cart is empty";
+    } else if (count >= 1) {
+      emptyCart.appendChild(createNewCart());
     }
 
-    else if(count >= 1){
-        emptyCart.appendChild(createNewCart())? false : emptyCart.appendChild(createNewCart());
-    }
     hiddenDiv.style.display = 'none';
     emptyCart.style.display = 'block';
-    superScript.style.display ="block";
-    emptyCartContainer.style.display ="block";
+    superScript.style.display = "block";
+    emptyCartContainer.style.display = "block";
 
-    if(black.textContent == 0){
-        superScript.textContent = 0
+    if (black.textContent === 0) {
+      superScript.textContent = 0;
     }
 
-})
+    addToCartExecuted = true; // Set the flag to true to indicate that the action has been executed
+});
+
+const negative = document.querySelector('.negative')
+const 
+
 
 // Add event listener to hide the cart on mouse leave
 emptyCartContainer.addEventListener('mouseleave', function () {
