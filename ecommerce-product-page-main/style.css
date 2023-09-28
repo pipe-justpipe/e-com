@@ -81,20 +81,24 @@ li:hover {
 } */
 
 .empty-cart {
-    box-shadow: 5px 5px 10px 2px #333;
+    box-shadow: 10px 25px 10px 10px #e3e0e0;
     width: 30%;
     border-radius: 5%;
     position: absolute;
     top: 70px;
     right: 300px;
     background-color: white;
+    display: none;
 }
 .hiddendiv{
     padding: 60px;
-    display: hidden;
+    display: none;
 }
 .hidden{
     display: none;
+}
+.show{
+    display: block;
 }
 
 .empty-cart-h {

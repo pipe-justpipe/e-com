@@ -59,11 +59,11 @@ function createNewCart(){
     // calculation.style.backgroundColor = 'black'
 
     deleteButton.addEventListener('click', function (){
-        emptyCart.classList.add('hidden');
-        hiddenDiv.classList.remove('hidden');
+        emptyCart.style.display = 'none';
+        hiddenDiv.style.display= 'block';
         hiddenDiv.textContent = 'Your cart is empty'
         count = 0;
-        superScript.classList.add('hidden');
+        superScript.style.display = 'none';
     });
   
 
@@ -98,7 +98,8 @@ console.log(typeof createNewCart(), createNewCart());
 bigButton.addEventListener( 'click', function addToCart(){
     superScript.innerHTML = count;
     if(count == 0){
-        emptyCartContainer.classList.remove('hidden');
+        // emptyCartContainer.classList.remove('hidden');
+        emptyCartContainer.style.display = "block"; 
         emptyCart.innerHTML = "Your cart is empty" ;
 
     }
@@ -106,18 +107,18 @@ bigButton.addEventListener( 'click', function addToCart(){
     else if(count >= 1){
         emptyCart.appendChild(createNewCart())? false : emptyCart.appendChild(createNewCart());
     }
-    hiddenDiv.classList.add("hidden");
-    emptyCart.classList.remove("hidden");
-    superScript.classList.remove("hidden");
-    emptyCartContainer.classList.remove("hidden");
+    hiddenDiv.style.display = 'none';
+    emptyCart.style.display = 'block';
+    superScript.style.display ="block";
+    emptyCartContainer.style.display ="block";
 
 })
 
 // Add event listener to hide the cart on mouse leave
 emptyCartContainer.addEventListener('mouseleave', function () {
-    emptyCartContainer.classList.add('hidden');
+    emptyCartContainer.classList.remove('show');
   });
 
   superScript.addEventListener('click', function () {
-    emptyCartContainer.classList.remove('hidden');
+    emptyCartContainer.classList.add('show');
   });
