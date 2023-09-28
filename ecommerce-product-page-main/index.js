@@ -94,7 +94,7 @@ function createNewCart(){
     btnElement.textContent = "Check out";
     // btnElement.style.backgroundColor = "hsl(26, 100%, 55%)";
     // btnElement.style.backgroundColor = "hsl(26, 100%, 55%); padding: 10px;";
-    btnElement.style.cssText = "background-color: hsl(26, 100%, 55%); padding: 10px; border: none;" ;
+    btnElement.style.cssText = "background-color: hsl(26, 100%, 55%); color:white; padding: 20px; margin-top:20px; border-radius:10px; border: none; width: 100%;";
 
 
 
