@@ -115,6 +115,10 @@ bigButton.addEventListener( 'click', function addToCart(){
     superScript.style.display ="block";
     emptyCartContainer.style.display ="block";
 
+    if(black.textContent == 0){
+        superScript.textContent = 0
+    }
+
 })
 
 // Add event listener to hide the cart on mouse leave
