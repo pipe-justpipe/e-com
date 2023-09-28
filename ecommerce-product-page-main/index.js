@@ -62,7 +62,7 @@ function createNewCart(){
         emptyCart.style.display = 'none';
         hiddenDiv.style.display= 'block';
         hiddenDiv.textContent = 'Your cart is empty'
-        count = 0;
+        // count = 0;
         superScript.style.display = 'none';
     });
   
@@ -116,9 +116,12 @@ bigButton.addEventListener( 'click', function addToCart(){
 
 // Add event listener to hide the cart on mouse leave
 emptyCartContainer.addEventListener('mouseleave', function () {
-    emptyCartContainer.classList.remove('show');
+    emptyCartContainer.style.display = "none";
   });
 
   superScript.addEventListener('click', function () {
     emptyCartContainer.classList.add('show');
+    if (emptyCartContainer.classList.contains('show')) {
+        emptyCartContainer.style.display = 'none';
+    }
   });
