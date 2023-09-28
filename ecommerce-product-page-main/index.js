@@ -90,6 +90,15 @@ function createNewCart(){
     
     /////////////////////////////////////////////////
     flexDiv.insertAdjacentElement("afterend",btnElement);
+
+    btnElement.textContent = "Check out";
+    // btnElement.style.backgroundColor = "hsl(26, 100%, 55%)";
+    // btnElement.style.backgroundColor = "hsl(26, 100%, 55%); padding: 10px;";
+    btnElement.style.cssText = "background-color: hsl(26, 100%, 55%); padding: 10px; border: none;" ;
+
+
+
+
     console.log(newElement);
     
     return newElement
