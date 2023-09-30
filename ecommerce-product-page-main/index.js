@@ -106,8 +106,7 @@ deleteButton.addEventListener('click', function (){
 });
 /////////
 
-///////////
-/////////////
+////////
 
 
 
