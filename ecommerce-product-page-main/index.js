@@ -104,7 +104,6 @@ deleteButton.addEventListener('click', function (){
     superScript.style.display = 'none';
     
 });
-/////////
 
 
 
