@@ -18,7 +18,7 @@ const btnElement = document.createElement('button');
 const deleteButton = document.createElement('img');
 const calculationSpan = document.createElement('span');
     // calculation.style.fontWeight = 'bold';
-    /////////////////////////////////////////////
+    //////////////////////////////////////////
 /*SETTING THE ATTRIBUTES OF TE ELEMENTS*/
     newElement.setAttribute('class', "new-element");
     flexDiv.setAttribute('class', "flex-div");
